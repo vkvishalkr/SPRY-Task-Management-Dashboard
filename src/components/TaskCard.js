@@ -36,7 +36,7 @@ const TaskCard = ({ task, onEdit, onDelete }) => {
       <p className="task-description">{task.description || 'No description'}</p>
       <div className="task-card-footer">
         <span className="task-due-date">
-          <i className="icon">📅</i> {formatDate(task.dueDate)}
+          {formatDate(task.dueDate)}
         </span>
         <div className="task-actions">
           <button
@@ -44,14 +44,14 @@ const TaskCard = ({ task, onEdit, onDelete }) => {
             onClick={() => onEdit(task)}
             aria-label="Edit task"
           >
-            ✏️ Edit
+            Edit
           </button>
           <button
             className="btn btn-delete"
             onClick={() => onDelete(task.id)}
             aria-label="Delete task"
           >
-            🗑️ Delete
+            Delete
           </button>
         </div>
       </div>

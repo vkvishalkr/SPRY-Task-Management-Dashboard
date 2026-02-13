@@ -7,7 +7,7 @@
 .dashboard-title {
   font-size: 2rem;
   font-weight: 700;
-  color: #333;
+  color: white;
   margin: 0 0 24px 0;
 }
 
@@ -105,7 +105,7 @@
 
 .filter-group label {
   font-size: 0.9rem;
-  color: #666;
+  color: white;
   font-weight: 500;
 }
 
@@ -137,14 +137,14 @@
 .empty-state {
   text-align: center;
   padding: 60px 20px;
-  background: white;
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .empty-state p {
   font-size: 1.1rem;
-  color: #666;
+  color: white;
   margin: 0;
 }
 

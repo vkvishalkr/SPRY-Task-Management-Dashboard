@@ -29,6 +29,18 @@ const Dashboard = ({ showCompletedOnly = false }) => {
         if (!b.dueDate) return -1;
         return new Date(a.dueDate) - new Date(b.dueDate);
       }
+      if (sortBy === 'title') {
+        return (a.title || '').localeCompare(b.title || '');
+      }
+      if (sortBy === 'status') {
+        return (a.status || '').localeCompare(b.status || '');
+      }
+      if (sortBy === 'createdDate') {
+        if (!a.createdAt && !b.createdAt) return 0;
+        if (!a.createdAt) return 1;
+        if (!b.createdAt) return -1;
+        return new Date(b.createdAt) - new Date(a.createdAt);
+      }
       return 0;
     });
 
@@ -97,7 +109,7 @@ const Dashboard = ({ showCompletedOnly = false }) => {
       <div className="controls-section">
         {!showCompletedOnly && (
           <button className="btn btn-primary" onClick={handleAddTask}>
-            ➕ Add New Task
+            Add New Task
           </button>
         )}
         <div className="filters">
@@ -126,6 +138,9 @@ const Dashboard = ({ showCompletedOnly = false }) => {
               className="filter-select"
             >
               <option value="dueDate">Due Date</option>
+              <option value="title">Title</option>
+              <option value="status">Status</option>
+              <option value="createdDate">Created Date</option>
             </select>
           </div>
         </div>

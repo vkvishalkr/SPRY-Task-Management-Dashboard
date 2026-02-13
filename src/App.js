@@ -11,7 +11,7 @@ const Navigation = () => {
     <nav className="main-nav">
       <div className="nav-container">
         <Link to="/" className="nav-logo">
-          📋 Task Manager
+          Task Manager
         </Link>
         <div className="nav-links">
           <Link
